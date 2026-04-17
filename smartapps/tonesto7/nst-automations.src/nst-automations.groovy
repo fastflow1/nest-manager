@@ -8030,17 +8030,21 @@ def getRemLogData() {
 
 				<title>NST Diagnostics - Logs</title>
 
+				<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+				<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+				<link rel="preconnect" href="https://maxcdn.bootstrapcdn.com" crossorigin>
+				<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+				<link rel="preconnect" href="https://use.fontawesome.com" crossorigin>
+
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-				<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-				<script src="https://use.fontawesome.com/fbe6a4efc7.js"></script>
-				<script src="https://fastcdn.org/FlowType.JS/1.1/flowtype.js"></script>
+				<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+				<script defer src="https://use.fontawesome.com/fbe6a4efc7.js"></script>
+				<script defer src="https://cdn.jsdelivr.net/gh/simplefocus/FlowType.JS@master/flowtype.js"></script>
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/0.9.1/hamburgers.min.css">
-				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
-				<link rel="stylesheet" href="https://rawgit.com/tonesto7/nest-manager/master/Documents/css/diagpages.min.css">
+				<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Documents/css/diagpages.min.css">
 				<style>
 				.pushy {
 					position: fixed;
@@ -8145,7 +8149,7 @@ def getRemLogData() {
 						</div>
 					</div>
 				</div>
-				<script src="https://rawgit.com/tonesto7/nest-manager/master/Documents/js/diagpages.min.js"></script>
+				<script src="https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Documents/js/diagpages.min.js"></script>
 				<script>
 					\$("#goHomeBtn").click(function() {
 						closeNavMenu();

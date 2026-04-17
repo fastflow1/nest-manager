@@ -7425,7 +7425,7 @@ def connectionStatus(message, redirectUrl = null) {
 		<head>
 			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 			<title>SmartThings & Nest connection</title>
-			<link rel="stylesheet" href="https://cdn.rawgit.com/tonesto7/nest-manager/master/Documents/css/authresults.css">
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Documents/css/authresults.css">
 		</head>
 		<body>
 			<div class="container" style="margin: auto; position: relative;">
@@ -8541,15 +8541,20 @@ def getWebHeaderHtml(title, clipboard=true, vex=false, swiper=false, charts=fals
 
 		<title>NST Diagnostics (${atomicState?.structName}) - ${title}</title>
 
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+		<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+		<link rel="preconnect" href="https://maxcdn.bootstrapcdn.com" crossorigin>
+		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+		<link rel="preconnect" href="https://use.fontawesome.com" crossorigin>
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-		<script src="https://use.fontawesome.com/fbe6a4efc7.js"></script>
-		<script src="https://fastcdn.org/FlowType.JS/1.1/flowtype.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<script defer src="https://use.fontawesome.com/fbe6a4efc7.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/gh/simplefocus/FlowType.JS@master/flowtype.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/0.9.1/hamburgers.min.css">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<script type="text/javascript">
 			const serverUrl = '${apiServerUrl('')}';
 			const cmdUrl = '${getAppEndpointUrl('processCmd')}';
@@ -8589,9 +8594,9 @@ def renderDiagHome() {
 		def html = """
 			<head>
 				${getWebHeaderHtml("Location")}
-				<link rel="stylesheet" href="https://cdn.rawgit.com/toubou91/percircle/master/dist/css/percircle.css">
-				<script src="https://cdn.rawgit.com/toubou91/percircle/master/dist/js/percircle.js"></script>
-				<link rel="stylesheet" href="https://cdn.rawgit.com/tonesto7/nest-manager/master/Documents/css/diaghome.min.css">
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/toubou91/percircle@master/dist/css/percircle.css">
+				<script src="https://cdn.jsdelivr.net/gh/toubou91/percircle@master/dist/js/percircle.js"></script>
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Documents/css/diaghome.min.css">
 				<style>
 				</style>
 			</head>
@@ -8745,7 +8750,7 @@ def renderDiagHome() {
 						</div>
 					</div>
 				</div>
-				<script src="https://cdn.rawgit.com/tonesto7/nest-manager/master/Documents/js/diaghome.min.js"></script>
+				<script src="https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Documents/js/diaghome.min.js"></script>
 			</body>
 		"""
 /* """ */
@@ -8870,7 +8875,7 @@ def renderManagerData() {
 		def html = """
 			<head>
 				${getWebHeaderHtml("Manager Data")}
-				<link rel="stylesheet" href="https://cdn.rawgit.com/tonesto7/nest-manager/master/Documents/css/diagpages.min.css">
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Documents/css/diagpages.min.css">
 				<style>
 					.pushy {
 					    position: fixed;
@@ -8984,13 +8989,15 @@ def renderManagerData() {
 					</div>
 				</div>
 				<script>
-					\$("body").flowtype({
-						minFont: 7,
-						maxFont: 10,
-						fontRatio: 30
-					});
+					if (typeof \$.fn.flowtype === "function") {
+						\$("body").flowtype({
+							minFont: 7,
+							maxFont: 10,
+							fontRatio: 30
+						});
+					}
 				</script>
- 			 	<script src="https://cdn.rawgit.com/tonesto7/nest-manager/master/Documents/js/diagpages.min.js"></script>
+ 			 	<script src="https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Documents/js/diagpages.min.js"></script>
  			 	<script>
 					\$(document).ready(function() {
 						${scrStr}
@@ -9065,7 +9072,7 @@ def renderAutomationData() {
 		def html = """
 			<head>
 				${getWebHeaderHtml("Automation Data")}
-				<link rel="stylesheet" href="https://cdn.rawgit.com/tonesto7/nest-manager/master/Documents/css/diagpages.min.css">
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Documents/css/diagpages.min.css">
 				<style>
 				</style>
 			</head>
@@ -9117,13 +9124,15 @@ def renderAutomationData() {
 					</div>
 				</div>
 				<script>
-					\$("body").flowtype({
-						minFont: 7,
-						maxFont: 10,
-						fontRatio: 30
-					});
+					if (typeof \$.fn.flowtype === "function") {
+						\$("body").flowtype({
+							minFont: 7,
+							maxFont: 10,
+							fontRatio: 30
+						});
+					}
 				</script>
- 				<script src="https://cdn.rawgit.com/tonesto7/nest-manager/master/Documents/js/diagpages.min.js"></script>
+ 				<script src="https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Documents/js/diagpages.min.js"></script>
  				<script>
 					\$(document).ready(function() {
 						${scrStr}
@@ -9264,7 +9273,7 @@ def renderDeviceData() {
 		def html = """
 			<head>
 				${getWebHeaderHtml("Device Data", true, true, true, true)}
-				<link rel="stylesheet" href="https://cdn.rawgit.com/tonesto7/nest-manager/master/Documents/css/diagpages_new.css">
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Documents/css/diagpages_new.css">
 				<style>
 					h1, h2, h3, h4, h5, h6 {
 						padding: 20px;
@@ -9320,13 +9329,15 @@ def renderDeviceData() {
 	 			   </div>
 	 			</div>
 				<script>
-					\$("body").flowtype({
-						minFont: 7,
-						maxFont: 10,
-						fontRatio: 30
-					});
+					if (typeof \$.fn.flowtype === "function") {
+						\$("body").flowtype({
+							minFont: 7,
+							maxFont: 10,
+							fontRatio: 30
+						});
+					}
 				</script>
-				<script src="https://cdn.rawgit.com/tonesto7/nest-manager/master/Documents/js/diagpages.min.js"></script>
+				<script src="https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Documents/js/diagpages.min.js"></script>
 				<script>
 					\$(document).ready(function() {
 						${scrStr}
@@ -9395,7 +9406,7 @@ def renderDeviceTiles(type=null) {
 		def html = """
 			<head>
 				${getWebHeaderHtml(type, true, true, true, true)}
-				<link rel="stylesheet" href="https://cdn.rawgit.com/tonesto7/nest-manager/master/Documents/css/diagpages_new.css">
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Documents/css/diagpages_new.css">
 				<style>
 					h1, h2, h3, h4, h5, h6 {
 						padding: 20px;
@@ -9451,13 +9462,15 @@ def renderDeviceTiles(type=null) {
 	 				</div>
 	 			</div>
 				<script>
-					\$("body").flowtype({
-						minFont: 7,
-						maxFont: 10,
-						fontRatio: 30
-					});
+					if (typeof \$.fn.flowtype === "function") {
+						\$("body").flowtype({
+							minFont: 7,
+							maxFont: 10,
+							fontRatio: 30
+						});
+					}
 				</script>
-				<script src="https://cdn.rawgit.com/tonesto7/nest-manager/master/Documents/js/diagpages.min.js"></script>
+				<script src="https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Documents/js/diagpages.min.js"></script>
 				<script>
 					\$(document).ready(function() {
 						${scrStr}
@@ -9489,7 +9502,7 @@ def renderHtmlMapDesc(title, heading, datamap) {
 		def html = """
 			<head>
 				${getWebHeaderHtml(title)}
-				<link rel="stylesheet" href="https://cdn.rawgit.com/tonesto7/nest-manager/master/Documents/css/diagpages.css">
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Documents/css/diagpages.css">
 				<style>
 				</style>
 			</head>
@@ -9547,7 +9560,7 @@ def renderHtmlMapDesc(title, heading, datamap) {
 	 					</div>
 	 	 			</div>
 	 	 		</div>
-			 	<script src="https://cdn.rawgit.com/tonesto7/nest-manager/master/Documents/js/diagpages.min.js"></script>
+			 	<script src="https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Documents/js/diagpages.min.js"></script>
 				<script>
 					\$("#goHomeBtn").click(function() {
 						closeNavMenu();
