@@ -3,7 +3,7 @@
 ## Verify the following before opening an issue:
 <!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
 <!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
-- [ ] You followed the Nest Developer documentation here? [Nest Developer Account Creation](https://cdn.rawgit.com/tonesto7/nest-manager/master/Documents/html/Create_Dev_Account.html)
+- [ ] You followed the Nest Developer documentation here? [Nest Developer Account Creation](https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Documents/html/Create_Dev_Account.html)
 - [ ] That _OAuth_ is Enabled for the SmartApp under the IDE.
 - [ ] The SmartApps and *_ALL_* (5) Devices Handlers are using the latest code available.
 - [ ] You have reviewed the [NST Manager Wiki](http://thingsthataresmart.wiki/index.php?title=NST_Manager) for potential fixes.

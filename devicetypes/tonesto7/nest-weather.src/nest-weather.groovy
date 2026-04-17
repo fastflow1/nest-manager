@@ -93,7 +93,7 @@ metadata {
 
 	tiles(scale: 2) {
 		valueTile("temp2", "device.temperature", width: 2, height: 2, decoration: "flat") {
-			state("default", label:'${currentValue}°', icon:"https://cdn.rawgit.com/tonesto7/nest-manager/master/Images/App/weather_icon.png",
+			state("default", label:'${currentValue}°', icon:"https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Images/App/weather_icon.png",
 					backgroundColors: getTempColors() )
 		}
 		valueTile("lastUpdatedDt", "device.lastUpdatedDt", width: 4, height: 1, decoration: "flat", wordWrap: true) {
@@ -115,7 +115,7 @@ metadata {
 		valueTile("remind", "device.blah", inactiveLabel: false, width: 6, height: 2, decoration: "flat", wordWrap: true) {
 			state("default", label: 'Reminder:\nHTML Content is Available in SmartApp')
 		}
-		htmlTile(name:"weatherHTML", action: "getWeatherHTML", width: 6, height: 16, whitelist: ["www.gstatic.com", "raw.githubusercontent.com", "cdn.rawgit.com"])
+		htmlTile(name:"weatherHTML", action: "getWeatherHTML", width: 6, height: 16, whitelist: ["www.gstatic.com", "raw.githubusercontent.com", "cdn.jsdelivr.net"])
 		valueTile("remind", "device.blah", inactiveLabel: false, width: 6, height: 2, decoration: "flat", wordWrap: true) {
 			state("default", label: 'Reminder:\nHTML Content is Available in SmartApp')
 		}
@@ -1151,7 +1151,7 @@ def getWeatCondFromUrl(url) {
 def getWeatherImg(cond) {
 	try {
 		def newCond = getWeatCondFromUrl(cond)
-		def url = "https://cdn.rawgit.com/tonesto7/nest-manager/master/Images/Weather/icons/black/${getWeatCondFromUrl(cond) ?: "unknown"}.svg"
+		def url = "https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Images/Weather/icons/black/${getWeatCondFromUrl(cond) ?: "unknown"}.svg"
 		return url
 	}
 	catch (ex) {
@@ -1162,7 +1162,7 @@ def getWeatherImg(cond) {
 
 def getFavIcon() {
 	try {
-		return "https://cdn.rawgit.com/tonesto7/nest-manager/master/Images/App/weather_icon.ico"
+		return "https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Images/App/weather_icon.ico"
 	}
 	catch (ex) {
 		log.error "getFavIcon Exception:", ex
@@ -1642,7 +1642,7 @@ def getWeatherHTML() {
 					<meta http-equiv="pragma" content="no-cache"/>
 					<meta name="viewport" content="width = device-width, user-scalable=no, initial-scale=1.0">
 
-				 	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tonesto7/nest-manager/master/Documents/css/ST-HTML.min.css"/>
+				 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Documents/css/ST-HTML.min.css"/>
 					<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.1.1/css/vex.min.css" async/>
 					<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.1.1/css/vex-theme-top.min.css" async />
 					<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.1.1/css/vex-theme-default.min.css" async/>

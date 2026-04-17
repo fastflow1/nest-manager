@@ -816,7 +816,7 @@ def getSmokeImg(b64=true) {
 
 def getImg(imgName) {
 	if(imgName) {
-		return imgName ? "https://cdn.rawgit.com/tonesto7/nest-manager/master/Images/Devices/$imgName" : ""
+		return imgName ? "https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Images/Devices/$imgName" : ""
 	} else {
 		log.error "getImg Error: Missing imgName value..."
 	}
@@ -947,7 +947,7 @@ def getInfoHtml() {
 				<meta http-equiv="pragma" content="no-cache"/>
 				<meta name="viewport" content="width = device-width, user-scalable=no, initial-scale=1.0">
 
-				<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tonesto7/nest-manager/master/Documents/css/ST-HTML.min.css"/>
+				<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonesto7/nest-manager@master/Documents/css/ST-HTML.min.css"/>
 				<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.1.1/css/vex.min.css" async/>
 				<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.1.1/css/vex-theme-top.min.css" async />
 				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

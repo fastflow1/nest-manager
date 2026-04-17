@@ -1,10 +1,7 @@
 var hdrHeight = $("#top-hdr").height();
 var hdrHeightPx = hdrHeight + 5 + "px";
 
-$("body").animate({
-    paddingTop: hdrHeightPx,
-    duration: 'fast'
-});
+$("body").css("paddingTop", hdrHeightPx);
 
 $("#rfrshBtn").click(function() {
     window.location.reload(true);
@@ -20,23 +17,29 @@ $("#rfrshBtn").hover(function(e) {
 //     window.history.back();
 // });
 
-$("body").flowtype({
-    minFont: 8,
-    maxFont: 15,
-    fontRatio: 30
-});
+if (typeof $.fn.flowtype === "function") {
+    $("body").flowtype({
+        minFont: 8,
+        maxFont: 15,
+        fontRatio: 30
+    });
+}
 
-$(window).scroll(function() {
-    if ($("body").scrollTop() > 20 || document.documentElement.scrollTop > 20) {
-        $("#scrollTopBtn").css({
-            display: "block"
-        });
-    } else {
-        $("#scrollTopBtn").css({
-            display: "none"
-        });
-    }
-});
+var scrollBtn = document.getElementById("scrollTopBtn");
+var scrollTicking = false;
+var scrollBtnVisible = false;
+window.addEventListener("scroll", function() {
+    if (scrollTicking) return;
+    scrollTicking = true;
+    window.requestAnimationFrame(function() {
+        var scrolled = (document.body.scrollTop || document.documentElement.scrollTop) > 20;
+        if (scrolled !== scrollBtnVisible && scrollBtn) {
+            scrollBtn.style.display = scrolled ? "block" : "none";
+            scrollBtnVisible = scrolled;
+        }
+        scrollTicking = false;
+    });
+}, { passive: true });
 
 function scrollToId(eId) {
     var item = $("#" + eId);
